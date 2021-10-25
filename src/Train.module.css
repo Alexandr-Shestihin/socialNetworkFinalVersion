@@ -1,0 +1,10 @@
+.enter {
+  display: -ms-grid;
+  display: grid;
+}
+
+.enter__input, .enter__button {
+  padding: 20px;
+  color: black;
+  font-size: 50px;
+}

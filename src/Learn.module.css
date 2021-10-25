@@ -1,0 +1,36 @@
+.value {
+  color: white;
+  font-size: 50px;
+  margin: 50px;
+}
+
+.value input,
+.value textarea {
+  color: black;
+  width: 190px;
+  font-size: 30px;
+}
+
+.value textarea {
+  width: 800px;
+  height: 100px;
+}
+
+.value button {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+}
+
+.value button:last-child {
+  width: 150px;
+}
+
+.value .mainButton {
+  width: 200px;
+  font-size: 20px;
+}
+
+.value div {
+  font-size: 20px;
+}

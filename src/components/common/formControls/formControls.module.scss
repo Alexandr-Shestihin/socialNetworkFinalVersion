@@ -1,0 +1,14 @@
+.errorInput {
+   border: 2px solid red;
+}
+.errorMassage {
+   color: red;
+   font-size: 14px;
+}
+.inputContainer {
+   display: flex;
+   width: 400px;
+   input {
+      margin-left: 10px;
+   }
+}

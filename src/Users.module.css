@@ -1,0 +1,37 @@
+.usersPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.button {
+  border-radius: 20px;
+}
+
+.buttonFallow {
+  background: #c716a1;
+  color: white;
+}
+
+.buttonUnfallow {
+  background: #19ffff;
+}
+
+.paginationButton {
+  margin: 10px 0 10px 10px;
+}
+
+.paginationButton_active {
+  background: #000000;
+  border: 2px solid #000000;
+  color: #19ffff;
+}
+
+.paginationButton button {
+  margin: 0 5px;
+}
+
+select,
+option {
+  color: black;
+}

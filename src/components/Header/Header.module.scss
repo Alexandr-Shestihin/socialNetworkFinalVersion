@@ -1,0 +1,21 @@
+.header {
+   grid-area: h;
+   background: lime;
+   .loginBlock {
+      color: rgb(163, 33, 135);
+      float: right;
+      margin: 15px 10px 0 0;
+   }
+   .loginBlockLink {
+      color: rgb(163, 33, 135);
+   }
+   button {
+      margin-left: 10px;
+   }
+}
+
+.header img {
+   height: 56px;
+   padding-top: 2px;
+   border-radius: 50%;
+}

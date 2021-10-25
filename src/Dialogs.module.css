@@ -1,0 +1,28 @@
+* {
+  color: white;
+}
+
+.dialogs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 10fr;
+      grid-template-columns: 3fr 10fr;
+  padding: 10px;
+}
+
+.dialogs .dialogs_items .dialog {
+  text-decoration: none;
+}
+
+.dialogs .messages {
+  padding-left: 10px;
+}
+
+.dialogs .messages textarea {
+  color: black;
+}
+
+.active {
+  font-size: 1.1em;
+  font-weight: 900;
+}

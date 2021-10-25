@@ -1,0 +1,15 @@
+.paginationButton {
+   margin: 10px 0 10px 10px;
+   &_active {
+      background: #000000;
+      border: 2px solid #000000;
+      color: #19ffff;
+   }
+   button {
+      margin: 0 5px;
+   }
+}
+select,
+option {
+   color: black;
+}

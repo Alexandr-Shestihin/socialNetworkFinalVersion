@@ -1,0 +1,12 @@
+.postsBlock {
+  padding: 10px;
+}
+
+.addPostBlock textarea,
+button {
+  color: black;
+}
+
+.posts {
+  margin-top: 10px;
+}

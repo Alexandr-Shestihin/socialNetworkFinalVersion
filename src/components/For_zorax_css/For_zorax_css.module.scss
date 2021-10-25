@@ -1,0 +1,57 @@
+.squere {
+   width: 60px;
+   height: 60px;
+   background: url("https://4.bp.blogspot.com/-XYM0yUsup4I/XK-JMl2wq_I/AAAAAAAAAGU/4uHby3lXG_sngIfjeYZag7G1dKuYuG1zACLcBGAs/s1600/1554141895031.png")
+      center no-repeat;
+   background-size: contain;
+   margin: 30px;
+   animation: heart 1s linear 0s infinite alternate;
+   &_s{
+      animation: heart 1.5s linear 1s infinite alternate;
+   }
+}
+
+@keyframes heart {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(2.2);
+   }
+}
+
+.wrapper {
+   margin: 80px;
+   perspective: 900px;
+   .cube {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      transform: rotateY(150deg);
+      transform-style: preserve-3d;
+      transform: scale(1.2);
+      .site {
+         height: 100%;
+         width: 100%;
+         background: rgba(177, 12, 192, 0.37);
+         position: absolute;
+         transform-origin: 50% 50% -150px;
+         border: 1px solid rgb(255, 254, 254);
+      }
+   }
+}
+.site1 {
+   transform: rotateX(90deg);
+}
+.site2 {
+   transform: rotateX(-90deg);
+}
+.site3 {
+   transform: rotateY(-90deg);
+}
+.site4 {
+   transform: rotateY(90deg);
+}
+.site5 {
+   transform: rotateY(180deg);
+}

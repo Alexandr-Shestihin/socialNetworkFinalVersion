@@ -16,7 +16,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 
 //import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { HashRouter, Switch } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 
@@ -78,11 +78,11 @@ let AppContainer = compose(withRouter,
 )(App);
 
 const MainJSApp = (props) => {
-   return <BrowserRouter>
+   return <HashRouter>
       <Provider store={store}>
          <AppContainer />
       </Provider>
-   </BrowserRouter>
+   </HashRouter>
 }
 
 export default MainJSApp;

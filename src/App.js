@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Nav from './components/Nav/Nav';
 import ProfileContainer from './components/Profile/ProfileContainer';

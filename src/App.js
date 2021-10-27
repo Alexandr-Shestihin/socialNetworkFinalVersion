@@ -15,7 +15,6 @@ import { initialazeApp } from './redux/app-reducer';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-//import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { BrowserRouter, Switch } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
@@ -77,8 +76,8 @@ let AppContainer = compose(withRouter,
    connect(mapStateToProps, { initialazeApp }),
 )(App);
 
-const MainJSApp = (props) => {
-   return <BrowserRouter>
+const MainJSApp = () => {
+   return <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
          <AppContainer />
       </Provider>

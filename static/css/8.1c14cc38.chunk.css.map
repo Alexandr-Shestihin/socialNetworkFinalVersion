@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/login/login.module.scss"],"names":[],"mappings":"AAAA,mBACG,cAAe,CADlB,8CAGM,SAAU,CACV,cAAe","file":"8.1c14cc38.chunk.css","sourcesContent":[".form {\r\n   margin: 10% 40%;\r\n   .errorMassage {\r\n      color: red;\r\n      font-size: 14px;\r\n   }\r\n}\r\n"]}

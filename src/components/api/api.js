@@ -32,9 +32,9 @@ export const usersAPI = {
          instance.get('auth/me')
       )
    },
-   login(email, password, rememberMe = false) {
+   login(email, password, rememberMe = false, captcha = null) {
       return (
-         instance.post('/auth/login', { email, password, rememberMe })
+         instance.post('/auth/login', { email, password, rememberMe, captcha })
       )
    },
    logout() {
@@ -65,14 +65,41 @@ export const profileAPI = {
          instance.put('profile/status/', { status: statusText })
       )
    },
+   savePhoto(photoFile) {
+      const formData = new FormData();
+      formData.append("image", photoFile);
+      //это для того, чтобы отправить файл с типом image
+      return (
+         instance.put('profile/photo/', formData, {
+            headers: {
+               'Content-Type': 'multipart/form-data'
+            }
+         })
+      )
+   },
+   saveProfile(profileData) {
+
+      return (
+         instance.put('profile', profileData)
+      )
+   },
+
 }
 
-
-//не работает
 export const loginAPI = {
    postLogin({ values }) {
       return (
          instance.post({ values })
+      )
+   },
+}
+
+export const securityAPI = {
+   getCaptchaUrl() {
+      return (
+         instance.get('security/get-captcha-url/').then(response => {
+            return response
+         })
       )
    },
 }

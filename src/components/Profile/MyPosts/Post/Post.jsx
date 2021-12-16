@@ -1,4 +1,5 @@
 import React from 'react';
+import UserPhoto from './../../../../assets/image/userPhoto.jpg';
 import s from "./Post.module.scss";
 
 const Post = (obj) => {
@@ -9,11 +10,15 @@ const Post = (obj) => {
 
    return (
       <div className={s.item}>
-         <img src={"https://sun9-22.userapi.com/impf/c857428/v857428728/c1d38/YAhH1xwuFYI.jpg?size=1280x960&quality=96&sign=9dd73da1d10e6c080b827595a160c7be&type=album"} />
-         <span className={s.massage}>{obj.massage}</span>
-         <div>
+
+         <div className={s.item__flexContainer}>
+            <img src={obj.photos ? obj.photos.small : UserPhoto} />
             <button className={s.likes}>Likes: {obj.likes}</button>
          </div>
+         <div className={s.massage}>{obj.massage}</div>
+
+
+
       </div>
    )
 }

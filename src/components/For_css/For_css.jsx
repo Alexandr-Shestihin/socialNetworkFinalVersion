@@ -1,22 +1,21 @@
 import React from 'react';
 import Learn from "./Learn/Learn";
-import s from "./For_zorax_css.module.scss";
+import s from "./For_css.module.scss";
 import Train from "./Train/Train";
 import Train_CSS from './Train_CSS/Train_CSS';
 import { NavLink, Route } from 'react-router-dom';
 
-const For_zorax_css = () => {
+const For_css = () => {
 
    return (
       <div className={s.main}>
-         <NavLink to='/For_zorax_css/Train_CSS'>Train_CSS</NavLink>
-         <Route path='/For_zorax_css/Train_CSS' render={() => <Train_CSS />} />
+         <NavLink to='/For_css/Train_CSS'>Train_CSS</NavLink>
+         <Route path='/For_css/Train_CSS' render={() => <Train_CSS />} />
          <br />
-         <NavLink to='/For_zorax_css/Train'>Train</NavLink>
-         <Route path='/For_zorax_css/Train' render={() => <Train />} />
+         <NavLink to='/For_css/Train'>Train</NavLink>
+         <Route path='/For_css/Train' render={() => <Train />} />
 
-         <div className={s.squere}></div>
-         <div className={`${s.squere} ${s.squere_s} `}></div>
+         {/* <div className={`${s.squere} ${s.squere_s} `}></div> */}
          <div className={s.wrapper}>
             <div className={s.cube}>
                <div className={s.site + " " + s.site1}>1</div>
@@ -31,4 +30,4 @@ const For_zorax_css = () => {
          <Learn />
       </div >)
 }
-export default For_zorax_css;
+export default For_css;

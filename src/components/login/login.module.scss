@@ -1,7 +1,23 @@
+.form__login {
+   padding: 20px;
+   //text-align: center;
+}
 .form {
-   margin: 10% 40%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 100px;
    .errorMassage {
       color: red;
       font-size: 14px;
    }
+}
+.captchaImg {
+   width: 170px;
+}
+.form__elem {
+   margin-top: 25px;
+}
+button {
+   width: 160px;
 }

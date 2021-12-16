@@ -1,10 +1,38 @@
 .postsBlock {
+   margin-top: 40px;
    padding: 10px;
+   h3 {
+      font-size: 20px;
+   }
 }
-.addPostBlock textarea,
-button {
-   color: black;
+.addPostBlock {
+   margin-top: 20px;
+   textarea {
+      &:focus {
+         transition: all 0.5s linear;
+         height: 200px;
+         width: 450px;
+      }
+      transition: all 0.5s linear;
+      width: 250px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 5px;
+   }
 }
 .posts {
    margin-top: 10px;
+}
+
+.addNewPostForm {
+   display: flex;
+   //align-items: center;
+   .addNewPostForm__btn {
+      margin-top: -4px;
+      margin-left: 5px;
+      width: 60px;
+      //height: 30px;
+      line-height: 30px;
+      border-radius: 5px;
+   }
 }

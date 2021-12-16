@@ -9,9 +9,13 @@ const Textarea = Element('textarea');
 
 const MyPosts = React.memo((props) => {
 
-   console.log('RENDER');
-
-   let postsElements = props.posts.map(p => (<Posts name={p.name} massage={p.massage} likes={p.likes} key={p.id} />))
+   let postsElements = props.posts.map(p => (<Posts
+      name={p.name}
+      massage={p.massage}
+      likes={p.likes}
+      key={p.id}
+      photos={props.photos}
+   />))
 
    return (
       <div className={s.postsBlock}>
@@ -56,7 +60,7 @@ export const AddNewPostForm = (props) => {
             handleSubmit,
             isSubmitting,
          }) => (
-            <form onSubmit={handleSubmit}>
+            <form className={s.addNewPostForm} onSubmit={handleSubmit}>
                <Field
                   component={Textarea}
                   errors={errors.postText}
@@ -67,8 +71,11 @@ export const AddNewPostForm = (props) => {
                   onBlur={handleBlur}
                   value={values.postText}
                />
-               <br />
-               <button type="submit" disabled={isSubmitting}>
+               <button
+                  className={s.addNewPostForm__btn}
+                  type="submit"
+                  disabled={isSubmitting}
+               >
                   Submit
                </button>
             </form>
@@ -110,3 +117,26 @@ export default MyPosts;
       )
    }
 } */
+
+
+
+/* const MyPosts = React.memo((props) => {
+
+   console.log('RENDER');
+
+   let postsElements = props.posts.map(p => (<Posts name={p.name} massage={p.massage} likes={p.likes} key={p.id} />))
+
+   return (
+      <div className={s.postsBlock}>
+         <h3>My posts</h3>
+         <div className={s.addPostBlock}>
+            <div>
+               <AddNewPostForm {...props} />
+            </div>
+         </div>
+         <div className={s.posts}>
+            {postsElements}
+         </div>
+      </div >
+   )
+}) */

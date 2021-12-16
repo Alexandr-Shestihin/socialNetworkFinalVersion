@@ -1,0 +1,42 @@
+.descriptionBlock__Container {
+   margin-left: 50px;
+}
+.descriptionBlock__itemContainer {
+   display: flex;
+}
+.descriptionBlock__item {
+   margin-top: 20px;
+}
+
+.descriptionBlock__lookingForAJob {
+   margin-top: 20px;
+   .descriptionBlock__lookingForAJob_select {
+      color: black;
+      options {
+         color: black;
+      }
+   }
+}
+.descriptionBlock__skils {
+   margin-top: 20px;
+}
+.descriptionBlock__aboutMeContainer {
+   margin-left: 100px;
+}
+.descriptionBlock__aboutMe {
+}
+textarea {
+   padding: 5px;
+   width: 300px;
+   height: 50px;
+}
+.errorMassage {
+   color: red;
+   font-size: 14px;
+}
+.descriptionBlock__btn {
+   margin-top: 20px;
+   width: 60px;
+   height: 20px;
+   line-height: 20px;
+}

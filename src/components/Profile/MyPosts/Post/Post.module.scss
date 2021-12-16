@@ -1,21 +1,32 @@
 .item {
-   color: rgb(20, 209, 77);
-   position: relative;
+   //color: rgb(20, 209, 77);
+   //position: relative;
+   //border: 1px solid red;
+   display: flex;
+   align-items: flex-start;
    margin-bottom: 50px;
-   margin-top: 20px;
+   margin-top: 40px;
+   .item__flexContainer {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //border: 1px solid red;
+   }
    .likes {
-      cursor: pointer;
-      color: #000;
+      width: 70px;
    }
    .massage {
+      min-width: 90px;
       color: #000;
+      margin-top: 10px;
+      margin-left: 20px;
       font-size: 20px;
-      display: inline-block;
       background-color: rgb(255, 255, 255);
-      width: 300px;
-      height: 50px;
-      position: absolute;
-      left: 150px;
+      //width: 300px;
+      //position: absolute;
+      //left: 150px;
+      position: relative;
       border-radius: 20px;
       padding: 15px;
       &:after {

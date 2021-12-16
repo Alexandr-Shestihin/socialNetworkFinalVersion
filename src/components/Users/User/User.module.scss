@@ -1,0 +1,35 @@
+.userMainContainer {
+   margin: 40px 20px 20px 20px;
+   width: 120px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 200px;
+   padding: 2px;
+   overflow: hidden;
+}
+.usersPhoto {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 1px solid rgb(0, 0, 0);
+}
+.button {
+   border-radius: 20px;
+   width: 70px;
+   margin-top: 10px;
+}
+.buttonFallow {
+   background: rgb(199, 22, 161);
+   color: white;
+}
+.buttonUnfallow {
+   background: #19ffff;
+}
+.userContainer__text {
+   text-align: center;
+}
+select,
+option {
+   color: black;
+}

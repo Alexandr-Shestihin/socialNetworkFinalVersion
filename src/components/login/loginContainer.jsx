@@ -2,7 +2,7 @@ import React from 'react';
 import Login from './login';
 import { connect } from 'react-redux';
 import { thunkLogin } from '../../redux/auth-reducer';
-//комментарий
+
 class LoginContainer extends React.Component {
    componentDidMount() {
       this.props.thunkLogin();
@@ -19,6 +19,7 @@ let mapStateToProps = (state) => {
       email: state.auth.email,
       login: state.auth.login,
       isAuth: state.auth.isAuth,
+      captchaUrl: state.auth.captchaUrl,
    }
 }
 

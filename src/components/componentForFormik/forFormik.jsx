@@ -8,7 +8,7 @@ const Input = Element('input');
 const ForFormik = (props) => {
    const validationSchema = yup.object().shape({
       name: yup.string().matches(
-         /^[a-zA-ZаА-яЯ0-9]+$/,
+         /^[a-zA-Z0-9]+$/,
          'Недопустимые символы'
       ).required('Обязательно'),
       tel: yup.string()
@@ -30,6 +30,7 @@ const ForFormik = (props) => {
                password: '123',
                email: 'shestihin@mail.ru',
                confirmPassword: '123',
+               color: 'red',
             }}
             validateOnBlur
             onSubmit={(values) => {
@@ -117,12 +118,18 @@ const ForFormik = (props) => {
                         touched={touched.confirmPassword}
                      />
                   </div>
+                  <Field as="select" name="color">
+                     <option value="red">Red</option>
+                     <option value="green">Green</option>
+                     <option value="blue">Blue</option>
+                  </Field>
+                  <br />
+                  <br />
                   <button
                      disabled={!isValid && !dirty}
                      onClick={handleSubmit}
                      type={'submit'}
                   >Отправить</button>
-
                </form>
             )}
 

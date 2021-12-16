@@ -3,15 +3,15 @@ const DELETE_MASSAGE = 'DELETE-MASSAGE';
 
 let initialeState = {
    dialogs: [
-      { id: 0, name: 'Чёрный властелин' },
+      { id: 0, name: 'Владимир Иванов' },
       { id: 1, name: 'Иван' },
-      { id: 2, name: 'Шкальник' },
+      { id: 2, name: 'Пётр' },
       { id: 3, name: 'Ян' },
       { id: 4, name: 'Александр' },
       { id: 5, name: 'Николай' },
-      { id: 6, name: 'ПК' },
-      { id: 7, name: 'Белый властелин' },
-      { id: 8, name: 'Лень было имя придумывать' },
+      { id: 6, name: 'Артём' },
+      { id: 7, name: 'Дмитрий' },
+      { id: 8, name: 'Лев' },
    ],
    massages: [
       { id: 1, massage: "Привет" },

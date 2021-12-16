@@ -1,0 +1,13 @@
+.status {
+   margin-top: 28px;
+   .status__text {
+      font-weight: bold;
+   }
+}
+.status__input {
+   padding: 5px;
+   width: 400px;
+}
+.status__span {
+   cursor: pointer;
+}

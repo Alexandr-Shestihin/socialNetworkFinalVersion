@@ -10,13 +10,13 @@ const Input = Element('input');
 const Login = (props) => {
    return (
       <div className={s.form}>
-         <h1>Login</h1>
+         <h1 className={s.form__login}>Login</h1>
          <LoginForm {...props} />
       </div>
    )
 }
 
-export const LoginForm = ({ isAuth, login, password, thunkLogin }) => {
+export const LoginForm = ({ isAuth, login, password, thunkLogin, captchaUrl }) => {
    //сделана деструктуризация: вместо props были в объекте прокинуты сво-ва
    const validationSchema = yup.object().shape({
       login: yup.string().min(5, "минимум 5 символов").email('Не email').required('Обязательно'),
@@ -29,8 +29,9 @@ export const LoginForm = ({ isAuth, login, password, thunkLogin }) => {
          initialValues={{ login: login, password: password }}
          validationSchema={validationSchema}
          onSubmit={(values, { setSubmitting, setStatus }) => {
-            thunkLogin(values.login, values.password, values.isAuth, setStatus);
+            thunkLogin(values.login, values.password, values.isAuth, values.captcha, setStatus);
             setSubmitting(false);
+            values.captcha = null;
          }}
       >
          {({
@@ -46,31 +47,33 @@ export const LoginForm = ({ isAuth, login, password, thunkLogin }) => {
             <form onSubmit={handleSubmit}>
                <p className={s.errorMassage}>{status}</p>
 
-               {createField(Input, errors.login, status, touched.login, "login", "login", "login", 'Login', handleChange, handleBlur, values.login)}
+               <div>
+                  {createField(null, Input, errors.login, status, touched.login, "login", "login", "login", 'Login', handleChange, handleBlur, values.login)}
+               </div>
 
-               {createField(Input, errors.password, status, touched.password, "password", "password", "Password", "Password", handleChange, handleBlur, values.password)}
+               <div className={s.form__elem}>
+                  {createField(null, Input, errors.password, status, touched.password, "password", "password", "Password", "Password", handleChange, handleBlur, values.password)}
+               </div>
 
-               {createField(Input, null, null, null, "checkbox", "rememberMe", "rememberMe", "rememberMe", handleChange, handleBlur, null, 'remember me')}
-
-               {/* <div className={s.inputContainer}>
-                  <Field
-                     component={Input}
-                     errors={errors.password}
-                     status={status}
-                     touched={touched.password}
-                     type="password"
-                     name="password"
-                     id="password"
-                     placeholder="Password"
-                     onChange={handleChange}
-                     onBlur={handleBlur}
-                     value={values.password}
-                  />
+               {/* <div className={s.form__elem}>
+                  {createField(null, Input, null, null, null, "checkbox", "rememberMe", "rememberMe", "rememberMe", handleChange, handleBlur, null, 'remember me')}
                </div> */}
-               {/* <div className={s.inputContainer}>
-                  <Field component="input" type="checkbox" name="rememberMe" id="rememberMe" /><label htmlFor="rememberMe">remember me</label></div> */}
-               <br />
-               <button type="submit" disabled={isSubmitting}>Submit</button>
+
+               <button
+                  className={s.form__elem}
+                  type="submit"
+                  disabled={isSubmitting}
+               >Submit</button>
+
+               {captchaUrl && <div>
+                  < img className={s.captchaImg} src={captchaUrl} alt="" />
+                  {createField(null, Input, errors.captcha, status, touched.captcha, "captcha", "captcha", "captcha", ' Captcha', handleChange, handleBlur, values.captcha)}
+                  <p className={s.errorMassage}>{status}</p>
+               </div>}
+
+
+
+
             </form>
          )}
       </Formik >

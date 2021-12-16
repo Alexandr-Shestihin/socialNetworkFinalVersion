@@ -1,3 +1,55 @@
 .descriptionBlock {
    padding: 10px;
+   .descriptionBlock__container {
+      display: flex;
+      //justify-content: space-between;
+      .descriptionBlock__itemContainer {
+         h1 {
+            font-size: 24px;
+         }
+         display: flex;
+         flex-direction: column;
+         margin-left: 50px;
+         .descriptionBlock__flexContainer {
+            margin-top: 20px;
+            justify-content: space-between;
+            display: flex;
+            .descriptionBlock__item {
+               .descriptionBlock__item_text {
+                  font-weight: bold;
+               }
+            }
+         }
+      }
+   }
+   .descriptionBlock__lookingForAJob {
+      margin-bottom: 20px;
+   }
+}
+
+.descriptionBlock__photoBlock {
+   max-width: 252px;
+}
+.mainPfoto {
+   max-width: 250px;
+   border-radius: 15px;
+}
+.descriptionBlock__input {
+   color: transparent;
+}
+.descriptionBlock__aboutMe {
+   flex: 0 1 50%;
+}
+.btnBlock {
+   display: flex;
+   width: 80%;
+   margin: 0 auto;
+   justify-content: flex-end;
+   .btnBlock__btn {
+      width: 70px;
+      height: 22px;
+      line-height: 22px;
+      border-radius: 5px;
+      font-size: 16px;
+   }
 }

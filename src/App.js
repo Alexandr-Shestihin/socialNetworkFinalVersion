@@ -61,7 +61,7 @@ class App extends React.Component {
                      <div className="app-wrapper-content">
                         <React.Suspense fallback={<Preload />}>
                            <Switch >
-                              {/* <Route path="/forFormik" render={() => <ForFormik />} /> */}
+                              <Route path="/forFormik" render={() => <ForFormik />} />
                               <Route path="/Dialogs" component={DialogsContainer} />
                               <Route exact path='/' render={() => <Redirect to={"/profile"} />} />
                               <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
@@ -80,7 +80,7 @@ class App extends React.Component {
                </div>
                <div className="footer">
                   <div className="content">
-                     <p className="footer__text">Social Network 2021</p>
+                     <p className="footer__text">Social Network 2021-2023</p>
                   </div>
                </div>
             </div>

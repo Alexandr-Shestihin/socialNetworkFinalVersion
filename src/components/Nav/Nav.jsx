@@ -28,9 +28,9 @@ const Nav = (props) => {
          <div className={s.item}>
             <NavLink to="/For_css" activeClassName={s.active}>For_css</NavLink>
          </div>
-         {/* <div className={s.item}>
+         <div className={s.item}>
             <NavLink to="/forFormik" activeClassName={s.active}>ForFormik</NavLink>
-         </div> */}
+         </div>
          <div className={`${s.item} ${s.item__friends}`}>
             <h2>Frients</h2>
             <div className={s.item__mainBlock}>

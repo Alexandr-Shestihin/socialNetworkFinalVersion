@@ -10,6 +10,7 @@ class UsersFunc extends React.Component {
       const { currentPage, pageSize } = this.props;
       this.props.thunkCreator(currentPage, pageSize)
    }
+
    showCountUsersOnPage = (pageNumber) => {
       this.props.thunkCreator(1, pageNumber)
    }
